@@ -1,4 +1,4 @@
-# TechnoVIT Events Puzzle 🧩
+# TechnoVIT Events Puzzle 
 
 An interactive sliding-puzzle mini-game built for the **CodeChef &lt;VIT Chennai&gt; Chapter** club expo at TechnoVIT. Freshers reassemble our event posters to discover what's happening — one puzzle per event.
 
@@ -9,18 +9,18 @@ An interactive sliding-puzzle mini-game built for the **CodeChef &lt;VIT Chennai
 4. You get **3 minutes 30 seconds** per puzzle.
 5. On solving (or when time runs out), the full **event details** are revealed.
 
-## 🗓️ Events Featured
+## Events Featured
 - **Code-O-Fiesta** — a 3-round coding showdown (2 Sept 2026, Netaji Auditorium)
 - **Innovation Unbound** — AI for Financial Inclusion Hackathon (3–4 Sept 2026, Kamaraj Auditorium)
 
-## 🛠️ Built With
+## Built With
 - HTML, CSS, and vanilla JavaScript — no frameworks, no build step.
 - 4×4 sliding-puzzle logic with guaranteed-solvable shuffling.
 
-## 🚀 Run Locally
+##  Run Locally
 Just open `index.html` in any browser — no server needed.
 
-## 📁 Structure
+## Structure
 technovit-puzzle/
 ├── index.html # Welcome page
 ├── game.html # Puzzle page
