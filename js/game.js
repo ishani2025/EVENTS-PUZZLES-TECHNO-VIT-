@@ -1,8 +1,8 @@
-/* ===== TechnoVIT 4x4 Sliding Puzzle ===== */
+/* ===== TechnoVIT 3x3 Sliding Puzzle ===== */
 
-const GRID = 4;
+const GRID = 3;
 const TOTAL = GRID * GRID;
-const TIME_LIMIT = 250; // seconds (3 minutes 30 seconds)
+const TIME_LIMIT = 90; 
 
 const PUZZLES = [
   {
@@ -133,6 +133,25 @@ function clickTile(index) {
 
   if (isSolved()) win();
 }
+
+function moveWithArrow(key) {
+  const blank = tiles.indexOf(TOTAL - 1);
+  const row = Math.floor(blank / GRID), col = blank % GRID;
+  const tileByKey = {
+    ArrowUp: row < GRID - 1 ? blank + GRID : -1,
+    ArrowDown: row > 0 ? blank - GRID : -1,
+    ArrowLeft: col < GRID - 1 ? blank + 1 : -1,
+    ArrowRight: col > 0 ? blank - 1 : -1,
+  };
+  const tileIndex = tileByKey[key];
+  if (tileIndex !== undefined && tileIndex !== -1) clickTile(tileIndex);
+}
+
+document.addEventListener("keydown", (event) => {
+  if (!Object.hasOwn({ ArrowUp: true, ArrowDown: true, ArrowLeft: true, ArrowRight: true }, event.key)) return;
+  event.preventDefault();
+  moveWithArrow(event.key);
+});
 
 function startTimer() {
   clearInterval(timerId);
