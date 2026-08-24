@@ -2,7 +2,7 @@
 
 const GRID = 4;
 const TOTAL = GRID * GRID;
-const TIME_LIMIT = 210; // seconds (3 minutes 30 seconds)
+const TIME_LIMIT = 250; // seconds (3 minutes 30 seconds)
 
 const PUZZLES = [
   {
