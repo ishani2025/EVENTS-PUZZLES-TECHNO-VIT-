@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TechnoVIT Puzzles — CodeChef VIT Chennai</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="game-body">
+
+  <div class="grid-bg"></div>
+  <div class="scanlines"></div>
+
+  <header class="game-header">
+    <div class="brand">
+      <img src="images/codechef.png" alt="logo" class="mini-logo" />
+      <span class="brand-text">TECHNOVIT // PUZZLE <span id="puzzleCounter">1 / 3</span></span>
+    </div>
+    <div class="timer-box">
+      <span class="timer-label">TIME</span>
+      <span id="timer" class="timer-value">02:00</span>
+    </div>
+  </header>
+
+  <main class="game-main">
+
+    <!-- Left: puzzle board -->
+    <section class="board-section">
+      <h2 id="eventName" class="event-name glow-cyan">CODE-O-FIESTA</h2>
+      <p class="board-hint">Slide tiles into the empty slot to rebuild the poster.</p>
+
+      <div class="board-frame">
+        <div id="board" class="board"></div>
+      </div>
+
+      <div class="controls">
+        <span class="moves-chip">MOVES: <b id="moveCount">0</b></span>
+        <button id="shuffleBtn" class="ghost-btn">SHUFFLE</button>
+      </div>
+    </section>
+
+    <!-- Right: reference image + progress -->
+    <aside class="ref-section">
+      <p class="ref-label">TARGET IMAGE</p>
+      <div class="ref-frame">
+        <img id="refImage" src="images/fiesta.png" alt="reference" class="ref-image" />
+      </div>
+      <div class="progress-list" id="progressList"></div>
+    </aside>
+
+  </main>
+
+  <!-- Win / time-up overlay -->
+  <div id="overlay" class="overlay hidden">
+    <div class="overlay-card">
+      <div class="overlay-dot"></div>
+      <h2 id="overlayTitle" class="overlay-title">PUZZLE SOLVED</h2>
+      <p id="overlayText" class="overlay-text"></p>
+      <img id="overlayImg" src="" alt="" class="overlay-img" />
+      <button id="overlayBtn" class="start-btn">NEXT PUZZLE &rarr;</button>
+    </div>
+  </div>
+
+  <!-- Final done overlay -->
+  <div id="finalOverlay" class="overlay hidden">
+    <div class="overlay-card">
+      <div class="overlay-dot"></div>
+      <h2 class="overlay-title neon">ALL EVENTS UNLOCKED!</h2>
+      <p class="overlay-text">
+        You've seen everything TechnoVIT has in store. Come join us —
+        scan the QR codes on the posters to register!
+      </p>
+      <button class="start-btn" onclick="window.location.href='index.html'">BACK TO START</button>
+    </div>
+  </div>
+
+  <script src="js/game.js"></script>
+</body>
+</html>
